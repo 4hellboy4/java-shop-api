@@ -10,10 +10,12 @@ import com.yoshatech.order_service.model.Order;
 import com.yoshatech.order_service.model.OrderLineItems;
 import com.yoshatech.order_service.repository.OrderRepository;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor  
+@RequiredArgsConstructor
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepository;
